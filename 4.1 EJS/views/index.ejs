@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title %></title>
+</head>
+<body>
+    <h1>
+        <!--title goes here-->
+        <%= title %> Tags
+    </h1>
+    <!--get and display current seconds since 01/01/1970-->
+    <p>
+        Current seconds: <%= seconds %>
+    </p>
+    <!--if seconds is odd-->
+    <% if (seconds % 2 != 0) { %>
+     <p>
+        No items to display
+    </p>
+    <% } else { %> 
+        <!--if seconds is even, iterate through the array-->
+        <ul>
+            <% items.forEach((item) => { %>
+                <li>
+                    <%= item %>
+                </li>
+            <% }) %>
+        </ul>
+    <% } %> 
+    <%- htmlContent %> 
+    <%- include('footer.ejs') %>
+</body>
+</html>

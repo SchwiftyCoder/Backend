@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-header">
+            <h2>ToDo List</h2>
+            <span class="todo-input">
+                <form action="/task" id="submitTask" method="post">
+                    <input type="text" id="taskContent", name="taskLogger" placeholder="enter your task here">
+                    <label for="task-area">
+                        <label for="addTaskBtn"></label>
+                        <input type="submit" name="add-task" value="+" id="addTaskBtn">
+                    </label>
+                    <div id="input-status"></div>
+                </form>
+            </span>
+        </div>
+        <!-- populate scheduled tasks below -->
+        <div class="todo-body">
+            <div class="task-list">
+                <div class="task">
+                    <!-- insert the task here as an unordered list -->
+                    <ul>
+                        <% if (locals.task) { %>
+                            <% for( let index = 0; index < task.length; index++ ) { %>
+                                <li class="strike-through">
+                                    <%= task[index] %>
+                                </li>
+                            <% } %>
+                        <% } %>
+                    </ul>
+                </div>
+                <div class="task-date">
+                    <%# insert date here using javascript %>
+                </div>
+            </div> 
+              
+        </div>
+    </div>
+
+    
+    <script src="javascript/script.js" charset="UTF-8"></script> 
+</body>
+</html>

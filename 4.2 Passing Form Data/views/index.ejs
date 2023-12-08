@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--check if the charCount variable has bene set-->
+    <% if (locals.charCount) { %>
+     <!--display the title with the character count-->
+     <h1>There are <%= charCount%> characters in your name</h1>
+    <% } else {%>
+        <h1>Please enter your name here: </h1>
+    <% } %>
+         
+    <form action="/submit" method="post"> 
+        <input type="text" id="fName", name="firstname", placeholder="firstName"> 
+        <input type="text" id="lName", name="lastname" placeholder="lastname">
+        <input type="submit" value="ok">
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+#band-name {
+    color: yellow;
+}
+
+#copyright {
+    color: pink;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.band-content {
+    text-align: center;
+}
+
+main {
+    height: 100vh;  
+    position: relative;  
+} 
+
